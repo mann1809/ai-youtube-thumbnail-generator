@@ -6,6 +6,10 @@ A Spring Boot web application that leverages Google's Nano Banana AI to generate
 
 This application transforms ordinary images into viral-ready YouTube thumbnails using AI. Users upload an image and provide a video description, then the system uses Google's Nano Banana model to create professional, attention-grabbing thumbnails optimized for YouTube's platform.
 
+## Demo 
+
+<img width="1344" height="981" alt="image" src="https://github.com/user-attachments/assets/955e0d91-1363-41c2-911d-a1d1e868bd5a" />
+
 ## Technology Stack
 
 - **Backend**: Spring Boot 3.5.5 with Java 21
