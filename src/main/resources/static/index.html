@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light">
+    <header>
+        <h1>YouTube Thumbnail Generator</h1>
+    </header>
+
+    <main class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+        <!-- Left Panel: Input -->
+        <article>
+            <header>
+                <h2>Upload & Generate</h2>
+            </header>
+            
+            <form id="thumbnailForm" enctype="multipart/form-data">
+                <label for="imageFile">
+                    Upload Image:
+                    <input type="file" id="imageFile" name="file" accept="image/*" required>
+                </label>
+                
+                <div id="imagePreview" class="hidden" style="margin: 1rem 0;">
+                    <label>Preview:</label>
+                    <img id="previewImg" alt="Image preview" style="max-width: 100%; height: auto; border: 2px solid var(--pico-primary); border-radius: var(--pico-border-radius); margin-top: 0.5rem;">
+                </div>
+
+                <label for="title">
+                    Video Description:
+                    <input type="text" id="title" name="title" placeholder="Enter your video description..." required>
+                </label>
+
+                <div class="grid">
+                    <button type="submit" class="contrast">Generate Thumbnail</button>
+                    <button type="button" id="resetBtn" class="secondary">Reset</button>
+                </div>
+            </form>
+
+            <div id="loading" class="hidden" style="margin-top: 1rem;">
+                <article aria-busy="true">
+                    <p><strong>Generating your thumbnail...</strong></p>
+                </article>
+            </div>
+
+            <div id="error" class="hidden" style="margin-top: 1rem;">
+                <article style="background: var(--pico-color-red-50); border: 1px solid var(--pico-color-red-200); color: var(--pico-color-red-600);">
+                    <span id="errorMessage"></span>
+                </article>
+            </div>
+        </article>
+
+        <!-- Right Panel: Result -->
+        <article>
+            <header>
+                <h2>Generated Thumbnail</h2>
+            </header>
+            
+            <div id="result" class="hidden">
+                <img id="generatedThumbnail" alt="Generated thumbnail" style="max-width: 100%; height: auto; border: 2px solid var(--pico-primary); border-radius: var(--pico-border-radius); margin-bottom: 1rem;">
+                <button id="downloadBtn" class="contrast">Download</button>
+            </div>
+
+            <div id="placeholder" style="text-align: center; color: var(--pico-muted-color); padding: 3rem 2rem; border: 2px dashed var(--pico-muted-border-color); border-radius: var(--pico-border-radius); background: var(--pico-background-color);">
+                <p>🎨 Your generated thumbnail will appear here</p>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

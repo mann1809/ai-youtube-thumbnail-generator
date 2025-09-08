@@ -1,0 +1,45 @@
+.hidden {
+    display: none !important;
+}
+
+img[src=""], img:not([src]) {
+    display: none;
+}
+
+/* Soft light theme customization */
+:root {
+    --pico-primary: #6366f1;
+    --pico-primary-background: #f0f4ff;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+header h1 {
+    text-align: center;
+    color: var(--pico-primary);
+    margin: 2rem 0;
+}
+
+article {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+input[type="file"] {
+    border: 2px dashed #c7d2fe !important;
+    background: #f8fafc !important;
+    text-align: center;
+    padding: 2rem;
+    color: var(--pico-primary);
+}
+
+#placeholder {
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    color: #64748b;
+    text-align: center;
+    padding: 3rem 2rem;
+}
